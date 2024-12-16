@@ -154,6 +154,7 @@ from sklearn.svm import SVC
 from sklearn.neural_network import MLPClassifier
 from xgboost import XGBClassifier, XGBRFClassifier
 from sklearn.model_selection import GridSearchCV, train_test_split
+from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
 # Split the data into train, validation, and test sets
 X_train, X_temp, y_train, y_temp = train_test_split(X, y_encoded, test_size=0.3, random_state=0)
@@ -225,7 +226,7 @@ models = {
 
 # Function to perform GridSearchCV for the best parameters
 def find_best_params(model, param_grid, X_train, y_train):
-    grid_search = GridSearchCV(model, param_grid, cv=5, scoring='accuracy', n_jobs=-1)
+    grid_search = GridSearchCV(model, param_grid, cv=5, scoring='neg_mean_squared_error', n_jobs=-1)
     grid_search.fit(X_train, y_train)
     return grid_search.best_params_
 
@@ -236,24 +237,32 @@ for model_name, model in models.items():
     best_params[model_name] = find_best_params(model, param_grids[model_name], X_train, y_train)
     print(f"Best parameters for {model_name}: {best_params[model_name]}")
 
+# Function to evaluate models using MSE, MAE, and R²
+def evaluate_model(model, X, y):
+    predictions = model.predict(X)
+    mse = mean_squared_error(y, predictions)
+    mae = mean_absolute_error(y, predictions)
+    r2 = r2_score(y, predictions)
+    return mse, mae, r2
+
 # Update the evaluation script with the best parameters
 for model_name, params in best_params.items():
     model = models[model_name].set_params(**params)
     model.fit(X_train, y_train)
-    val_score = model.score(X_val, y_val)
-    print(f"{model_name} Validation Accuracy: {val_score:.4f}")
+    val_mse, val_mae, val_r2 = evaluate_model(model, X_val, y_val)
+    print(f"{model_name} Validation - MSE: {val_mse:.4f}, MAE: {val_mae:.4f}, R²: {val_r2:.4f}")
 
 # Example model assessment function
 def model_assess(model, model_name):
     model.fit(X_train, y_train)
-    test_score = model.score(X_test, y_test)
-    print(f"{model_name} Test Accuracy: {test_score:.4f}")
+    test_mse, test_mae, test_r2 = evaluate_model(model, X_test, y_test)
+    print(f"{model_name} Test - MSE: {test_mse:.4f}, MAE: {test_mae:.4f}, R²: {test_r2:.4f}")
 
 # Evaluate each model with the best parameters
 for model_name, model in models.items():
     model_assess(model, model_name)
 
-"""Clustering"""
+"""KMeans Clustering"""
 
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
@@ -283,7 +292,7 @@ plt.xlabel("Feature 1")
 plt.ylabel("Feature 2")
 plt.show()
 
-"""Adding in PCA"""
+"""KMeans PCA"""
 
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
@@ -306,9 +315,9 @@ data['cluster'] = kmeans.labels_
 data['pca_1'] = X_pca[:, 0]
 data['pca_2'] = X_pca[:, 1]
 
-# Calculate silhouette score
-silhouette_avg = silhouette_score(X, kmeans.labels_)
-print(f"Silhouette Score: {silhouette_avg}")
+# Calculate silhouette score using PCA-reduced data
+silhouette_avg = silhouette_score(X_pca, kmeans.labels_)
+print(f"Silhouette Score (PCA-reduced data): {silhouette_avg}")
 
 # Plot the clusters
 plt.figure(figsize=(10, 6))
@@ -319,7 +328,7 @@ plt.ylabel("PCA Component 2")
 plt.colorbar(scatter, label='Cluster')
 plt.show()
 
-"""Using t-SNE"""
+"""t-SNE:"""
 
 from sklearn.manifold import TSNE
 from sklearn.cluster import KMeans
@@ -381,7 +390,9 @@ for song_index in song_indices:
 print(f"Genre Scores for the song '{song_title}':")
 print(genre_df.sort_values(by='Score', ascending=False))
 
-"""Fuzzy Clustering"""
+"""Fuzzy Clustering
+
+"""
 
 from fcmeans import FCM
 from sklearn import preprocessing
@@ -542,7 +553,9 @@ from sklearn.cluster import DBSCAN
 from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
+from sklearn.metrics import silhouette_score, classification_report
 
+# Assuming 'data' is already loaded
 y = data['genre']  # genre variable
 X = data.drop(columns=['genre', 'song_name'])  # select all columns but not the labels
 
@@ -563,11 +576,14 @@ X_train, X_test, y_train, y_test = train_test_split(X_scaled, y_encoded, test_si
 dbscan = DBSCAN(eps=0.5, min_samples=5)  # Adjust eps and min_samples as needed
 dbscan.fit(X_train)
 
+# Calculate silhouette score using the training data
+silhouette_avg = silhouette_score(X_train, dbscan.labels_)
+print(f"Silhouette Score: {silhouette_avg}")
+
 # Get the cluster labels
 cluster_labels = dbscan.labels_
 
 # Predict genres based on clusters
-# For each test sample, find the nearest cluster and predict genre based on majority voting within the cluster
 def predict_genre(X_test, dbscan, X_train, y_train):
     from scipy.spatial import distance
     predictions = []
@@ -586,12 +602,12 @@ def predict_genre(X_test, dbscan, X_train, y_train):
 # Predict genres for the test set
 y_pred = predict_genre(X_test, dbscan, X_train, y_train)
 
-# Map numeric labels back to genre names
-y_pred_genres = label_encoder.inverse_transform(y_pred[y_pred != -1])
-y_test_genres = label_encoder.inverse_transform(y_test[y_pred != -1])
+# Remove noise points from evaluation
+valid_indices = y_pred != -1
+y_pred_genres = label_encoder.inverse_transform(y_pred[valid_indices])
+y_test_genres = label_encoder.inverse_transform(y_test[valid_indices])
 
 # Evaluate the predictions
-from sklearn.metrics import classification_report
 print(classification_report(y_test_genres, y_pred_genres))
 
 # Visualize the clusters
