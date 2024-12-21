@@ -20,3 +20,34 @@ Report PDF link: https://github.com/athenahartigan/music-recommender/blob/main/M
 ![music_recommender_r-13](https://github.com/user-attachments/assets/825d32b4-3e3e-4ab4-bac6-0ffddca60cb6)
 ![music_recommender_r-14](https://github.com/user-attachments/assets/930a77ad-0a9e-465a-93df-20eb92a41cfe)
 ![music_recommender_r-15](https://github.com/user-attachments/assets/96957dbc-e757-4d40-8d6f-341d37663e05)
+
+Sample Images:
+![image](https://github.com/user-attachments/assets/b7645e62-2db1-4277-bc96-97b4566843b2)
+![image](https://github.com/user-attachments/assets/fb6d03cb-6bd9-4085-9ff2-16a21292d1fb)
+![image](https://github.com/user-attachments/assets/b48da03d-5aff-4c0a-8490-8b5438270de1)
+![image](https://github.com/user-attachments/assets/b6c219b9-4cab-4c60-87cd-a8bf2df1e0e9)
+![image](https://github.com/user-attachments/assets/80760fca-c2ee-4cd2-8a8e-e017487f3309)
+![image](https://github.com/user-attachments/assets/1d3db73f-65eb-49c5-b1bc-27ae732429da)
+![image](https://github.com/user-attachments/assets/ce65b9ce-b189-44af-bec4-f13e38e617cb)
+![image](https://github.com/user-attachments/assets/76f718fc-73c6-420e-90bd-6c951520408b)
+![image](https://github.com/user-attachments/assets/00a71dce-f0ba-4d3d-900f-9184d56ac9f7)
+![image](https://github.com/user-attachments/assets/f32ce892-2235-4570-bd64-d0748438b992)
+![image](https://github.com/user-attachments/assets/530a6a9b-2a89-4d10-a7e2-2980fc5a64ae)
+![image](https://github.com/user-attachments/assets/f2a6157b-ed64-4524-86da-d0b0092c7ef8)
+![image](https://github.com/user-attachments/assets/b1a36d54-3057-450d-8d1c-a07e39a9c9fb)
+![image](https://github.com/user-attachments/assets/9b798f59-d4ae-452a-a423-6a415999ed4a)
+![image](https://github.com/user-attachments/assets/7f8ebc69-2c5b-4dc6-9b2c-31e25610366f)
+![image](https://github.com/user-attachments/assets/3a0d26b4-3684-40be-8c05-aeb4d5d0c3cf)
+![image](https://github.com/user-attachments/assets/27915845-031a-482d-afd4-640e72752293)
+![image](https://github.com/user-attachments/assets/3b56ab2b-ae84-4bf1-a6c2-7dc0fd21e501)
+![image](https://github.com/user-attachments/assets/0fe3da4f-9364-4b5c-a19b-728a473b8b9d)
+![image](https://github.com/user-attachments/assets/e17eb571-9770-4d2a-bef6-c3b7d2d04e04)
+![image](https://github.com/user-attachments/assets/8334b255-ffcb-4cd4-9cf6-1af5d88dec9a)
+![image](https://github.com/user-attachments/assets/025e6fd7-ff84-4426-a64e-b9355e5f66ae)
+<img width="792" alt="Screenshot 2024-12-21 at 12 28 10 PM" src="https://github.com/user-attachments/assets/337a01ef-7ea7-4836-ac95-6dd06a4facbf" />
+
+
+
+
+
+
