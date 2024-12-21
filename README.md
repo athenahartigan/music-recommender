@@ -1,4 +1,4 @@
-# music-recommender
+# Music Recommender
 
 Demo: https://music-recommender-svm.streamlit.app/
 
