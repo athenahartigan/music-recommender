@@ -2,8 +2,7 @@
 
 Demo the app here! https://music-recommender-svm.streamlit.app/
 
-Report PDF link: https://github.com/athenahartigan/music-recommender/blob/main/Music_Recommender_System.pdf![music_recommender_r-15](https://github.com/user-attachments/assets/015afff0-a49e-4ace-94a5-7e6725667c25)
-
+Report PDF link: https://github.com/athenahartigan/music-recommender/blob/main/Music_Recommender_System.pdf
 
 
 ![music_recommender_r-01](https://github.com/user-attachments/assets/6a2f7e68-c48c-4bca-be6d-c3b6f7573630)
