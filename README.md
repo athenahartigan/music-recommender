@@ -21,6 +21,9 @@ Report PDF link: https://github.com/athenahartigan/music-recommender/blob/main/M
 ![music_recommender_r-14](https://github.com/user-attachments/assets/930a77ad-0a9e-465a-93df-20eb92a41cfe)
 ![music_recommender_r-15](https://github.com/user-attachments/assets/96957dbc-e757-4d40-8d6f-341d37663e05)
 
+Demo:
+https://github.com/user-attachments/assets/b48ecd8c-dbed-420e-9c35-c01c25a83c26
+
 Sample Images:
 ![image](https://github.com/user-attachments/assets/b7645e62-2db1-4277-bc96-97b4566843b2)
 ![image](https://github.com/user-attachments/assets/fb6d03cb-6bd9-4085-9ff2-16a21292d1fb)
@@ -45,7 +48,6 @@ Sample Images:
 ![image](https://github.com/user-attachments/assets/8334b255-ffcb-4cd4-9cf6-1af5d88dec9a)
 ![image](https://github.com/user-attachments/assets/025e6fd7-ff84-4426-a64e-b9355e5f66ae)
 
-https://github.com/user-attachments/assets/b48ecd8c-dbed-420e-9c35-c01c25a83c26
 
 
 
