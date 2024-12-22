@@ -1,6 +1,7 @@
 # Music Recommender
 
-Demo: https://music-recommender-svm.streamlit.app/
+Demo: 
+https://music-recommender-svm.streamlit.app/
 
 Report PDF link: https://github.com/athenahartigan/music-recommender/blob/main/Music_Recommender_System.pdf
 
