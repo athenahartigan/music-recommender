@@ -44,7 +44,7 @@ Sample Images:
 ![image](https://github.com/user-attachments/assets/e17eb571-9770-4d2a-bef6-c3b7d2d04e04)
 ![image](https://github.com/user-attachments/assets/8334b255-ffcb-4cd4-9cf6-1af5d88dec9a)
 ![image](https://github.com/user-attachments/assets/025e6fd7-ff84-4426-a64e-b9355e5f66ae)
-<img width="792" alt="Screenshot 2024-12-21 at 12 28 10 PM" src="https://github.com/user-attachments/assets/337a01ef-7ea7-4836-ac95-6dd06a4facbf" />
+https://github.com/user-attachments/assets/90caaf34-9323-4e62-a3c3-3f70affaf0f1
 
 
 
