@@ -1,8 +1,6 @@
 # Music Recommender
 
-Demo: 
-
-https://music-recommender-svm.streamlit.app/
+Demo: https://music-recommender-svm.streamlit.app/
 
 Report PDF link: https://github.com/athenahartigan/music-recommender/blob/main/Music_Recommender_System.pdf
 
@@ -24,6 +22,7 @@ Report PDF link: https://github.com/athenahartigan/music-recommender/blob/main/M
 ![music_recommender_r-15](https://github.com/user-attachments/assets/96957dbc-e757-4d40-8d6f-341d37663e05)
 
 Demo:
+
 https://github.com/user-attachments/assets/b48ecd8c-dbed-420e-9c35-c01c25a83c26
 
 Sample Images:
